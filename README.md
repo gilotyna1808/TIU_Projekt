@@ -52,4 +52,4 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
 Diagram ERD:
 
-![alt text](https://github.com/gilotyna1808/TIU_Projekt/master/Diagram_ERD.png?raw=true)
+![Diagram ERD](https://github.com/gilotyna1808/TIU_Projekt/master/Diagram_ERD.png?raw=true)
