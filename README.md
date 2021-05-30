@@ -50,6 +50,6 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
         * danych o wyscigu
 
-### Diagram ERD:
+### Diagram PDM:
 
 ![Diagram ERD](https://raw.githubusercontent.com/gilotyna1808/TIU_Projekt/main/Diagram_ERD.png)
