@@ -13,11 +13,11 @@ Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania prze
 
 Klient będzie dostarczał następujące funkcjonalności:
 
-        * logowanie się do serwisu przez użytkownika,
+        * logowanie się do serwisu przez użytkownika, []
 
-        * graficznej prezentacji listy nadchodzących wyścigów,
-
-        * utworzenie zakładu,
+        * graficznej prezentacji listy nadchodzących wyścigów,[]
+        
+        * utworzenie zakładu,[X]
 
         * wyświetlanie stanu konta oraz historii zakładów,
 
