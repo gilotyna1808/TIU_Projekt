@@ -49,6 +49,10 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
         * danych o przebiegu wyścigu dla wybranego konia,
 
         * danych o wyscigu
+        
+### Diagram ERD:
+
+![diagram ERD](https://user-images.githubusercontent.com/65342377/120119428-ec15b480-c197-11eb-9557-8c6c6019faf8.png)
 
 ### Diagram PDM:
 
