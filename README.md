@@ -53,6 +53,11 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
 
 
-### Diagram PDM:
+### Diagram ERD:
 
 ![Diagram ERD](https://raw.githubusercontent.com/gilotyna1808/TIU_Projekt/main/Diagram_ERD.png)
+
+### Diagram PDM:
+
+![Diagram PDM](https://raw.githubusercontent.com/gilotyna1808/TIU_Projekt/main/Diagram_PDM.png)
+
