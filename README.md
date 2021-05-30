@@ -3,13 +3,13 @@ Platforma zakładów bukmacherskich na wyścigi konne
 
 Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania przez użytkownika zakładów na symulowane wyścigi konne. Projekt ten będzie się składał z 3 elementów:
 
-*Klienta opartego o Angular’a.
+* [Klienta opartego o Angular’a,]
 
-*Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platfory ASP.NET
+* [Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platfory ASP.NET,]
 
-*Bazy danych opartej o MySql.
+* [Bazy danych opartej o MySql.]
 
-# Klient
+## Klient
 
 Klient będzie dostarczał następujące funkcjonalności:
 
@@ -24,7 +24,7 @@ Klient będzie dostarczał następujące funkcjonalności:
         *dla kont o uprawnieniach administratorskich możliwość planowania kolejnych wyścigów.
 
 
-# Aplikacja WebApi
+## Aplikacja WebApi
 
 Aplikacja WebApi będzie odpowiedzialna za następujące funkcjonalności:
 
@@ -36,7 +36,7 @@ Aplikacja WebApi będzie odpowiedzialna za następujące funkcjonalności:
 
        *symulacje wyścigów.
 
-# Baza danych
+## Baza danych
 
 Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
@@ -50,6 +50,6 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
         *danych o wyscigu
 
-Diagram ERD:
+### Diagram ERD:
 
 ![Diagram ERD](https://raw.githubusercontent.com/gilotyna1808/TIU_Projekt/main/Diagram_ERD.png)
