@@ -10,14 +10,15 @@ Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania prze
 * Bazy danych opartej o MySql.
 
 ## Klient
-
+[ ]
+[x]
 Klient będzie dostarczał następujące funkcjonalności:
 
-        * logowanie się do serwisu przez użytkownika, [ ]
+        * logowanie się do serwisu przez użytkownika,
 
-        * graficznej prezentacji listy nadchodzących wyścigów,[ ]
+        * graficznej prezentacji listy nadchodzących wyścigów,
         
-        * utworzenie zakładu,[x]
+        * utworzenie zakładu,
 
         * wyświetlanie stanu konta oraz historii zakładów,
 
