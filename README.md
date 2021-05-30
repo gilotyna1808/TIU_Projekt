@@ -10,8 +10,7 @@ Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania prze
 * Bazy danych opartej o MySql.
 
 ## Klient
-[ ]
-[x]
+
 Klient będzie dostarczał następujące funkcjonalności:
 
         * logowanie się do serwisu przez użytkownika,
