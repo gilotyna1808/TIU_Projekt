@@ -3,52 +3,52 @@ Platforma zakładów bukmacherskich na wyścigi konne
 
 Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania przez użytkownika zakładów na symulowane wyścigi konne. Projekt ten będzie się składał z 3 elementów:
 
-* [Klienta opartego o Angular’a,]
+* Klienta opartego o Angular’a,
 
-* [Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platfory ASP.NET,]
+* Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platfory ASP.NET,
 
-* [Bazy danych opartej o MySql.]
+* Bazy danych opartej o MySql.
 
 ## Klient
 
 Klient będzie dostarczał następujące funkcjonalności:
 
-        *logowanie się do serwisu przez użytkownika,
+        * logowanie się do serwisu przez użytkownika,
 
-        *graficznej prezentacji listy nadchodzących wyścigów,
+        * graficznej prezentacji listy nadchodzących wyścigów,
 
-        *utworzenie zakładu,
+        * utworzenie zakładu,
 
-        *wyświetlanie stanu konta oraz historii zakładów,
+        * wyświetlanie stanu konta oraz historii zakładów,
 
-        *dla kont o uprawnieniach administratorskich możliwość planowania kolejnych wyścigów.
+        * dla kont o uprawnieniach administratorskich możliwość planowania kolejnych wyścigów.
 
 
 ## Aplikacja WebApi
 
 Aplikacja WebApi będzie odpowiedzialna za następujące funkcjonalności:
 
-       *autoryzacja użytkownika
+       * autoryzacja użytkownika
 
-       *pośredniczenie w komunikacji pomiędzy użytkownikiem a bazą danych,
+       * pośredniczenie w komunikacji pomiędzy użytkownikiem a bazą danych,
 
-       *wykonywanie obliczeń i zapisywanie ich wyniku w bazie danych,
+       * wykonywanie obliczeń i zapisywanie ich wyniku w bazie danych,
 
-       *symulacje wyścigów.
+       * symulacje wyścigów.
 
 ## Baza danych
 
 Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
-        *danych do autoryzacji,
+        * danych do autoryzacji,
 
-        *danych klienta,
+        * danych klienta,
 
-        *danych o dostępnych koniach.
+        * danych o dostępnych koniach.
 
-        *danych o przebiegu wyścigu dla wybranego konia,
+        * danych o przebiegu wyścigu dla wybranego konia,
 
-        *danych o wyscigu
+        * danych o wyscigu
 
 ### Diagram ERD:
 
