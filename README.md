@@ -50,3 +50,6 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
         *danych o wyscigu
 
+Diagram ERD:
+
+![alt text](https://github.com/gilotyna1808/TIU_Projekt/master/Diagram_ERD.png?raw=true)
