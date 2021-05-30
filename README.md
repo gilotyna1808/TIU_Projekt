@@ -26,15 +26,15 @@ Klient będzie dostarczał następujące funkcjonalności:
 
 # Aplikacja WebApi
 
-Aplikacja WebApi będzie odpowiedzialna za następujące funkcjonalności
+Aplikacja WebApi będzie odpowiedzialna za następujące funkcjonalności:
 
-*autoryzacja użytkownika
+       *autoryzacja użytkownika
 
-*pośredniczenie w komunikacji pomiędzy użytkownikiem a bazą danych,
+       *pośredniczenie w komunikacji pomiędzy użytkownikiem a bazą danych,
 
-*wykonywanie obliczeń i zapisywanie ich wyniku w bazie danych,
+       *wykonywanie obliczeń i zapisywanie ich wyniku w bazie danych,
 
-*symulacje wyścigów.
+       *symulacje wyścigów.
 
 # Baza danych
 
