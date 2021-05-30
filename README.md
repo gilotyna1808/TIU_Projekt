@@ -1,5 +1,5 @@
-# TIU_Projekt
-Platforma zakładów bukmacherskie na wyścigi konne
+# Platforma zakładów bukmacherskich
+Platforma zakładów bukmacherskich na wyścigi konne
 
 Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania przez użytkownika zakładów na symulowane wyścigi konne. Projekt ten będzie się składał z 3 elementów:
 
