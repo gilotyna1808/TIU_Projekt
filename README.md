@@ -5,7 +5,7 @@ Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania prze
 
 * Klienta opartego o Angular’a,
 
-* Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platfory ASP.NET,
+* Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platformy ASP.NET,
 
 * Bazy danych opartej o MySql.
 
