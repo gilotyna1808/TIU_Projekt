@@ -55,7 +55,8 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
 ### Diagram ERD:
 
-![Diagram ERD](https://raw.githubusercontent.com/gilotyna1808/TIU_Projekt/main/Diagram_ERD.png)
+![diagramerdv2 (1)](https://user-images.githubusercontent.com/65342377/120239564-dae3ab00-c25e-11eb-9ba8-d4f2583c53b4.png)
+
 
 ### Diagram PDM:
 
