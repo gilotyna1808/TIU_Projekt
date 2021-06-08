@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiKonie", "WebApiKonie\WebApiKonie.csproj", "{472B70D0-CAD8-470A-BC36-BBA02013664A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{472B70D0-CAD8-470A-BC36-BBA02013664A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472B70D0-CAD8-470A-BC36-BBA02013664A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472B70D0-CAD8-470A-BC36-BBA02013664A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472B70D0-CAD8-470A-BC36-BBA02013664A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7803802C-B3C2-4971-B49E-4C2F79B57662}
+	EndGlobalSection
+EndGlobal
