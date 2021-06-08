@@ -59,6 +59,7 @@ Zadaniem bazy danej będzie przechowywanie następujących informacji:
 
 
 ### Diagram PDM:
+![diagrampdm3](https://user-images.githubusercontent.com/65342377/121226611-0d0e9180-c88b-11eb-901f-43b274da9bb1.png)
 
-![Diagram PDM](https://raw.githubusercontent.com/gilotyna1808/TIU_Projekt/main/Diagram_PDM.png)
+
 
