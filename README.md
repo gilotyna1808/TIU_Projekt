@@ -7,7 +7,7 @@ Celem projektu jest stworzenie platformy, która umożliwiałby dokonywania prze
 
 * Aplikacji platformy ASP.NET Core obsługującym usługi http RESTful oraz kontrolery platformy ASP.NET,
 
-* Bazy danych opartej o MySql.
+* Bazy danych opartej o Microsoft SQL Server Express.
 
 ## Klient
 
