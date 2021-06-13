@@ -5932,24 +5932,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Daniel\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Mateusz\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Politechnika\\SEMESTR_VI\\TIU\\Projekt\\GIT\\WebApiKonie\\WebApiKonie\\WebApiKonie.csproj",
+      "projectUniqueName": "C:\\Users\\Mateusz\\Source\\Repos\\TIU_Projekt\\WebApiKonie\\WebApiKonie\\WebApiKonie.csproj",
       "projectName": "WebApiKonie",
-      "projectPath": "E:\\Politechnika\\SEMESTR_VI\\TIU\\Projekt\\GIT\\WebApiKonie\\WebApiKonie\\WebApiKonie.csproj",
-      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "E:\\Politechnika\\SEMESTR_VI\\TIU\\Projekt\\GIT\\WebApiKonie\\WebApiKonie\\obj\\",
+      "projectPath": "C:\\Users\\Mateusz\\Source\\Repos\\TIU_Projekt\\WebApiKonie\\WebApiKonie\\WebApiKonie.csproj",
+      "packagesPath": "C:\\Users\\Mateusz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mateusz\\Source\\Repos\\TIU_Projekt\\WebApiKonie\\WebApiKonie\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
