@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiKonie.Models;
+using WebApiKonie.Services;
 
 namespace WebApiKonie.Controllers
 {
@@ -11,20 +12,19 @@ namespace WebApiKonie.Controllers
     [ApiController]
     public class LogowanieController : ControllerBase
     {
-        private ZakladyDB database;
+        private readonly ILogowanieService logowanieService;
 
         public LogowanieController(ZakladyDB zaklady)
         {
-            this.database = zaklady;
+            this.logowanieService = new LogowanieService(zaklady);
         }
 
         //Później zmiana z bool na token
         [HttpPost]
-        public bool Logowanie([FromBody]Autoryzacja login)
+        public ZalogowanyUzytkownikDTO Logowanie([FromBody]LogowanieDTO login)
         {
-            if (database.Autoryzacja.Where(res => res.Login == login.Login && res.Password == login.Password).Count() == 1) return true;
-
-            return false;
+            var zalogowanyUzytkownik = logowanieService.Login(login);
+            return zalogowanyUzytkownik;
         }
        
     }
