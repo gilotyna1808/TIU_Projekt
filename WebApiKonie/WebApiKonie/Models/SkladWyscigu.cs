@@ -19,11 +19,11 @@ namespace WebApiKonie.Models
         public Kon Kon3 { get; set; }
         public Kon Kon4 { get; set; }
         public Kon Kon5 { get; set; }
-        public int KursKon1 { get; set; }
-        public int KursKon2 { get; set; }
-        public int KursKon3 { get; set; }
-        public int KursKon4 { get; set; }
-        public int KursKon5 { get; set; }
+        public double KursKon1 { get; set; }
+        public double KursKon2 { get; set; }
+        public double KursKon3 { get; set; }
+        public double KursKon4 { get; set; }
+        public double KursKon5 { get; set; }
 
     }
 }
