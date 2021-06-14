@@ -14,9 +14,9 @@ namespace WebApiKonie.Models
         public int ID_Skladu { get; set; }
         [ForeignKey("ID_Wyscigu")]
         public int ID_Wyscigu { get; set; }
-        public Kon Kon1 { get; set; }
-        public Kon Kon2 { get; set; }
-        public Kon Kon3 { get; set; }
+        public virtual Kon Kon1 { get; set; }
+        public virtual Kon Kon2 { get; set; }
+        public virtual Kon Kon3 { get; set; }
         public Kon Kon4 { get; set; }
         public Kon Kon5 { get; set; }
         public double KursKon1 { get; set; }
