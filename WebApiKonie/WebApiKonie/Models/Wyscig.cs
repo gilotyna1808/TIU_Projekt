@@ -13,8 +13,6 @@ namespace WebApiKonie.Models
         [Key]
         [Required(ErrorMessage ="Id jest wymagane")]
         public int ID_Wyscigu { get; set; }
-        [Required(ErrorMessage = "Skład jest wymagany")]
-        SkladWyscigu SkladWyscigu { get; set; }
         [Required(ErrorMessage = "Data jest wymagana")]
         public DateTime DateTime { get; set; }
         public bool Zakonczony { get; set; }

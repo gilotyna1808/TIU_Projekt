@@ -163,20 +163,20 @@ namespace WebApiKonie.Migrations
                     b.Property<int?>("Kon5ID_Konia")
                         .HasColumnType("int");
 
-                    b.Property<int>("KursKon1")
-                        .HasColumnType("int");
+                    b.Property<double>("KursKon1")
+                        .HasColumnType("float");
 
-                    b.Property<int>("KursKon2")
-                        .HasColumnType("int");
+                    b.Property<double>("KursKon2")
+                        .HasColumnType("float");
 
-                    b.Property<int>("KursKon3")
-                        .HasColumnType("int");
+                    b.Property<double>("KursKon3")
+                        .HasColumnType("float");
 
-                    b.Property<int>("KursKon4")
-                        .HasColumnType("int");
+                    b.Property<double>("KursKon4")
+                        .HasColumnType("float");
 
-                    b.Property<int>("KursKon5")
-                        .HasColumnType("int");
+                    b.Property<double>("KursKon5")
+                        .HasColumnType("float");
 
                     b.HasKey("ID_Skladu");
 

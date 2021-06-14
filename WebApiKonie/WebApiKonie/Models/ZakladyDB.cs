@@ -24,6 +24,7 @@ namespace WebApiKonie.Models
             optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Mateusz\Source\Repos\TIU_Projekt\WebApiKonie\WebApiKonie\Baza.mdf';Integrated Security=True;
                                           Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
                                           ApplicationIntent=ReadWrite;MultiSubnetFailover=False").UseLoggerFactory(loggerFactory);
+            
         }
     }
 }

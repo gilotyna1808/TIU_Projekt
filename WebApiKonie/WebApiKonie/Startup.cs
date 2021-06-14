@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiKonie.Models;
+using WebApiKonie.Services;
 
 namespace WebApiKonie
 {
@@ -28,6 +30,8 @@ namespace WebApiKonie
         {
 
             services.AddControllers();
+            services.AddDbContext<ZakladyDB>();
+            //services.AddSingleton<KlientService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiKonie", Version = "v1" });
