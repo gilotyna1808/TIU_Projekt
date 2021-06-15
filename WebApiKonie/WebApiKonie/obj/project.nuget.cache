@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ArNIDO2qMUgA61QirFf9q49TDgRp/8tuGN11kVyqVpJPDsXvD5AoiTfWzLXBa3g4+IgzoB4rtkNd6X0d4xn3MA==",
+  "dgSpecHash": "SsmfYjjdgfFlwOlbWoBAm9Rn7NALhs7umrEiZtLA7gekQpassZmsI4Me7/EzsqzcEGyPLdU4kQ4sXCzzxAbViA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mateusz\\Source\\Repos\\TIU_Projektv2\\WebApiKonie\\WebApiKonie\\WebApiKonie.csproj",
+  "projectFilePath": "C:\\Users\\Mateusz\\source\\repos\\TIU_Projektv2\\WebApiKonie\\WebApiKonie\\WebApiKonie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mateusz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mateusz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.7\\microsoft.aspnetcore.authentication.jwtbearer.5.0.7.nupkg.sha512",
