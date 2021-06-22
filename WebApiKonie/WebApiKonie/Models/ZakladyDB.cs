@@ -18,13 +18,19 @@ namespace WebApiKonie.Models
         public DbSet<Zakład> Zaklady { get; set; }
         
         public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder => { builder.AddDebug(); });
+        
+        protected ZakladyDB(DbContextOptions options) : base(options) { }
 
+        public ZakladyDB(DbContextOptions<ZakladyDB> options): this((DbContextOptions)options) { }
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Mateusz\Source\Repos\TIU_Projekt\WebApiKonie\WebApiKonie\Baza.mdf';Integrated Security=True;
+            if (!optionsBuilder.IsConfigured)
+            {
+            optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\Politechnika\SEMESTR_VI\TIU\Projekt\GIT\WebApiKonie\WebApiKonie\Baza.mdf';Integrated Security=True;
                                           Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
                                           ApplicationIntent=ReadWrite;MultiSubnetFailover=False").UseLoggerFactory(loggerFactory);
-            
+            }
         }
     }
 }

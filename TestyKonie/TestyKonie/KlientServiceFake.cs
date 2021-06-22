@@ -10,37 +10,72 @@ namespace TestyKonie
 {
     class KlientServiceFake : IKlientServices
     {
-        private readonly ZakladyDB database;
-        public KlientServiceFake(ZakladyDB zaklady)
+        private List<KlientDTO> klients;
+        public KlientServiceFake()
         {
-            database = zaklady;
+            klients = new List<KlientDTO> {
+                new KlientDTO
+                {
+                    ID_Klienta=1,
+                    Imie="Daniel",
+                    Email="aaa@tlen.pl",
+                    Nazwisko="Dabrowski",
+                    StanKonta=150.00M,
+                    Wiek=22
+                },
+                new KlientDTO
+                {
+                    ID_Klienta=2,
+                    Imie="Mateusz",
+                    Email="aaa@tlen.pl",
+                    Nazwisko="Gibas",
+                    StanKonta=1050.00M,
+                    Wiek=22
+                },
+                new KlientDTO
+                {
+                    ID_Klienta=3,
+                    Imie="Tomasz",
+                    Email="aaa@tlen.pl",
+                    Nazwisko="Blaszczyk",
+                    StanKonta=1500.00M,
+                    Wiek=22
+                },
+            };
         }
 
 
         public bool dodajKlienta(KlientDTO klient)
         {
-            throw new NotImplementedException();
+            klients.Add(klient);
+            return true;
         }
 
         public IEnumerable<KlientDTO> getAll()
         {
-            var k = database.Klienci.ToList();
-            return KlientDTO.toKlientDTO(k);
+            return klients;
         }
 
         public KlientDTO getById(int id)
         {
-            return KlientDTO.toKlientDTO(database.Klienci.Where(s => s.ID_Klienta == id).First());
+            return klients.Where(s=>s.ID_Klienta==id).Single();
         }
 
         public bool modyfikujKlienta(KlientDTO klient)
         {
-            throw new NotImplementedException();
+            KlientDTO k = klients.Where(s => s.ID_Klienta == klient.ID_Klienta).Single();
+            k.Email = klient.Email;
+            k.Imie = klient.Imie;
+            k.Nazwisko = klient.Nazwisko;
+            k.StanKonta = klient.StanKonta;
+            k.Wiek = klient.Wiek;
+            return true;
         }
 
         public bool zmienStanKonta(int id, decimal kwota)
         {
-            throw new NotImplementedException();
+            klients.Where(s => s.ID_Klienta == id).Single().StanKonta = kwota;
+            return true;
         }
     }
 }

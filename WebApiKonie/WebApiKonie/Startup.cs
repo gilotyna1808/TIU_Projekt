@@ -33,6 +33,10 @@ namespace WebApiKonie
         {
 
             services.AddControllers();
+            services.AddScoped<IKonService,KonService>();
+            services.AddScoped<IKlientServices, KlientService>();
+            services.AddScoped<IWyscigService, WyscigService>();
+            services.AddScoped<ILogowanieService, LogowanieService>();
             services.AddDbContext<ZakladyDB>();
             //services.AddSingleton<KlientService>();
             services.AddSwaggerGen(c =>

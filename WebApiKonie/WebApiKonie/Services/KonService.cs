@@ -8,7 +8,8 @@ namespace WebApiKonie.Services
 {
     public class KonService : IKonService
     {
-        ZakladyDB database;
+        private readonly ZakladyDB database;
+
         public KonService(ZakladyDB zaklady)
         {
             database = zaklady;

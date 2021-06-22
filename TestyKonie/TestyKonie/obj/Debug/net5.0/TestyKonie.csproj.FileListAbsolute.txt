@@ -275,3 +275,4 @@ C:\Users\Mateusz\Source\Repos\TIU_Projektv2\TestyKonie\TestyKonie\obj\Debug\net5
 C:\Users\Mateusz\Source\Repos\TIU_Projektv2\TestyKonie\TestyKonie\obj\Debug\net5.0\ref\TestyKonie.dll
 C:\Users\Mateusz\Source\Repos\TIU_Projektv2\TestyKonie\TestyKonie\obj\Debug\net5.0\TestyKonie.pdb
 C:\Users\Mateusz\Source\Repos\TIU_Projektv2\TestyKonie\TestyKonie\obj\Debug\net5.0\TestyKonie.genruntimeconfig.cache
+E:\Politechnika\SEMESTR_VI\TIU\Projekt\GIT\TestyKonie\TestyKonie\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

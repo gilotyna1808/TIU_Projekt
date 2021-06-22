@@ -12,18 +12,18 @@ namespace WebApiKonie.Controllers
     [ApiController]
     public class LogowanieController : ControllerBase
     {
-        private readonly ILogowanieService logowanieService;
+        private readonly ILogowanieService _logowanieService;
 
-        public LogowanieController(ZakladyDB zaklady)
+        public LogowanieController(ILogowanieService logowanieService)
         {
-            this.logowanieService = new LogowanieService(zaklady);
+            this._logowanieService = logowanieService;
         }
 
         //Później zmiana z bool na token
         [HttpPost]
         public ZalogowanyUzytkownikDTO Logowanie([FromBody]LogowanieDTO login)
         {
-            var zalogowanyUzytkownik = logowanieService.Login(login);
+            var zalogowanyUzytkownik = _logowanieService.Login(login);
             return zalogowanyUzytkownik;
         }
        

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebApiKonie.Controllers;
 using WebApiKonie.Models;
+using WebApiKonie.Services;
 using Xunit;
 
 namespace TestyKonie
@@ -18,9 +19,19 @@ namespace TestyKonie
         
         public KonTest()
         {
-            DbContextOptions<ZakladyDB> options = new DbContextOptionsBuilder<ZakladyDB>().UseInMemoryDatabase(databaseName: "baza").Options;
-            ZakladyDB zaklady = new ZakladyDB();
-            _konController = new KonController(zaklady);
+            //Testy na sztucznej bazie
+            string dbname = Guid.NewGuid().ToString();
+            var options = new DbContextOptionsBuilder<ZakladyDB>().UseInMemoryDatabase(databaseName: dbname).Options;
+            _konController = new KonController(new KonService(new ZakladyDB(options)));
+
+            //Arrange
+            KonDTO kon = new KonDTO() { Kondycja = 95, Kraj = "Polska", Nazwa = "Piorun", Predkosc = 80, Wiek = 3 };
+            KonDTO kon2 = new KonDTO() { Kondycja = 95, Kraj = "Polska", Nazwa = "FindMe", Predkosc = 80, Wiek = 3 };
+            _konController.add(kon);
+            _konController.add(kon);
+            _konController.add(kon2);
+            _konController.add(kon);
+            _konController.add(kon);
         }
 
         [Fact]
@@ -41,10 +52,10 @@ namespace TestyKonie
         public void PobranieKoniaoDanymId()
         {
             //Arange
-            string nazwa = "Elf";
+            string nazwa = "FindMe";
 
             //Act
-            var okResult = _konController.getById(7).Result as OkObjectResult;
+            var okResult = _konController.getById(3).Result as OkObjectResult;
 
             //Assert
             Assert.IsType<KonDTO>(okResult.Value);
@@ -60,7 +71,7 @@ namespace TestyKonie
 
             //Assert
             var items = Assert.IsType<List<KonDTO>>(okResult.Value);
-            Assert.Equal(15, items.Count);
+            Assert.Equal(5, items.Count);
         }
 
 

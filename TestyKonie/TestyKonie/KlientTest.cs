@@ -18,9 +18,12 @@ namespace TestyKonie
 
         public KlientTest()
         {
-            DbContextOptions<ZakladyDB> options = new DbContextOptionsBuilder<ZakladyDB>().UseInMemoryDatabase(databaseName: "baza").Options;
-            ZakladyDB zaklady = new ZakladyDB();
-            _controler = new KlientController(zaklady);
+            //Testy na orginalnej bazie
+            string dbname = Guid.NewGuid().ToString();
+            var options = new DbContextOptionsBuilder<ZakladyDB>().UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\Politechnika\SEMESTR_VI\TIU\Projekt\GIT\WebApiKonie\WebApiKonie\Baza.mdf';Integrated Security=True;
+                                          Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
+                                          ApplicationIntent=ReadWrite;MultiSubnetFailover=False").Options;
+            _controler = new KlientController(new KlientService(new ZakladyDB(options)));
         }
 
         [Fact]

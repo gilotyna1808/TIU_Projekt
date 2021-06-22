@@ -13,39 +13,39 @@ namespace WebApiKonie.Controllers
     [ApiController]
     public class KonController : ControllerBase
     {
-        private readonly IKonService konService;
+        private readonly IKonService _konService;
 
-        public KonController(ZakladyDB zaklady)
+        public KonController(IKonService konService)
         {
-            this.konService = new KonService(zaklady);
+            this._konService = konService;
         }
 
 
         [HttpGet]
         public ActionResult <IEnumerable<KonDTO>> getAll()
         {
-            var wynik = konService.PobierzKonie();
+            var wynik = _konService.PobierzKonie();
             return Ok(wynik);
         }
 
         [HttpGet("{id}")]
         public ActionResult<KonDTO> getById(int id)
         {
-            var wynik = konService.PobierzKonia(id);
+            var wynik = _konService.PobierzKonia(id);
             return Ok(wynik);
         }
 
         [HttpPost]
         public ActionResult<bool> add([FromBody]KonDTO kon)
         {
-            konService.DodajKonia(kon);
+            _konService.DodajKonia(kon);
             return Ok(true);
         }
 
         [HttpPut]
         public ActionResult<bool> update([FromBody] KonDTO kon)
         {
-            konService.ModyfikujKonia(kon);
+            _konService.ModyfikujKonia(kon);
             return Ok(true);
         }
     }

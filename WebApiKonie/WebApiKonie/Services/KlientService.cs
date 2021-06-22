@@ -17,7 +17,8 @@ namespace WebApiKonie.Services
 
         public bool dodajKlienta(KlientDTO klient)
         {
-            throw new NotImplementedException();
+            database.Klienci.Add(KlientDTO.toKlient(klient));
+            return true;
         }
 
         public IEnumerable<KlientDTO> getAll()

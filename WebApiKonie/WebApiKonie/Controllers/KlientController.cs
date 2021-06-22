@@ -13,30 +13,36 @@ namespace WebApiKonie.Controllers
     [ApiController]
     public class KlientController : ControllerBase
     {
-        private readonly IKlientServices klientService;
+        private readonly IKlientServices _klientService;
 
-        public KlientController(ZakladyDB zaklady)
+        public KlientController(IKlientServices klientServices)
         {
-            this.klientService = new KlientService(zaklady);
+            this._klientService = klientServices;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<KlientDTO>> getAll()
         {
-            var klienci = klientService.getAll();
+            var klienci = _klientService.getAll();
             return Ok(klienci);
         }
 
         [HttpGet("{id}")]
         public ActionResult<KlientDTO> getById(int id)
         {
-            return Ok(klientService.getById(id));
+            return Ok(_klientService.getById(id));
         }
 
         [HttpPut]
         public ActionResult<bool> update([FromBody]KlientDTO klient)
         {
-            return Ok(klientService.modyfikujKlienta(klient));
+            return Ok(_klientService.modyfikujKlienta(klient));
+        }
+
+        [HttpPost]
+        public ActionResult<bool> add([FromBody] KlientDTO klient)
+        {
+            return Ok(_klientService.dodajKlienta(klient));
         }
     }
 }
