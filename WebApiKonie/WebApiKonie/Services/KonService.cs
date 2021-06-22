@@ -28,7 +28,7 @@ namespace WebApiKonie.Services
             k.Kraj = kon.Kraj;
             k.Nazwa = kon.Nazwa;
             k.Predkosc = kon.Predkosc;
-            k.Wiek = k.Wiek;
+            k.Wiek = kon.Wiek;
             database.SaveChanges();
             return true;
         }
