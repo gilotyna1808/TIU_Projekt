@@ -226,11 +226,17 @@ namespace WebApiKonie.Migrations
                     b.Property<int>("ID_Klienta")
                         .HasColumnType("int");
 
+                    b.Property<int>("ID_Konia")
+                        .HasColumnType("int");
+
                     b.Property<int>("ID_Wyscigu")
                         .HasColumnType("int");
 
                     b.Property<double>("Kurs")
                         .HasColumnType("float");
+
+                    b.Property<decimal>("KwotaZakladu")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("Wygrany")
                         .HasColumnType("bit");
@@ -241,6 +247,8 @@ namespace WebApiKonie.Migrations
                     b.HasKey("ID_Zakladu");
 
                     b.HasIndex("ID_Klienta");
+
+                    b.HasIndex("ID_Konia");
 
                     b.HasIndex("ID_Wyscigu");
 
@@ -306,6 +314,12 @@ namespace WebApiKonie.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("WebApiKonie.Models.Kon", "Kon")
+                        .WithMany()
+                        .HasForeignKey("ID_Konia")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("WebApiKonie.Models.Wyscig", "Wyscig")
                         .WithMany()
                         .HasForeignKey("ID_Wyscigu")
@@ -313,6 +327,8 @@ namespace WebApiKonie.Migrations
                         .IsRequired();
 
                     b.Navigation("Klient");
+
+                    b.Navigation("Kon");
 
                     b.Navigation("Wyscig");
                 });

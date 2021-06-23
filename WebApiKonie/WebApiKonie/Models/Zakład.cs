@@ -19,11 +19,14 @@ namespace WebApiKonie.Models
         [ForeignKey("ID_Wyscigu")]
         [Required(ErrorMessage = "Wyscig jest wymagany jest wymagane")]
         public Wyscig Wyscig { get; set; }
+        [ForeignKey("ID_Konia")]
+        [Required(ErrorMessage = "Kon jest wymagany")]
+        public Kon Kon { get; set; }
         [Required(ErrorMessage = "Kwota jest wymagana")]
-        Decimal KwotaZakladu { get; set; }
+        public Decimal KwotaZakladu { get; set; }
         [Required(ErrorMessage = "Kurs jest wymagany")]
         public double Kurs { get; set; }
-        public bool Wygrany { get; set; }
+        public bool? Wygrany { get; set; }
         public bool Wyplacony { get; set; }
     }
 }

@@ -37,6 +37,9 @@ namespace WebApiKonie
             services.AddScoped<IKlientServices, KlientService>();
             services.AddScoped<IWyscigService, WyscigService>();
             services.AddScoped<ILogowanieService, LogowanieService>();
+            services.AddScoped<IZakladService, ZakladService>();
+            services.AddScoped<IRejestracja, Rejestracja>();
+            services.AddScoped<IPrzebiegService, PrzebiegService>();
             services.AddDbContext<ZakladyDB>();
             //services.AddSingleton<KlientService>();
             services.AddSwaggerGen(c =>

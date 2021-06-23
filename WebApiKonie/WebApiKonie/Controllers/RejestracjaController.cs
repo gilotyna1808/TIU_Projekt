@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiKonie.DTO;
 using WebApiKonie.Models;
-
+using WebApiKonie.Services;
 
 namespace WebApiKonie.Controllers
 {
@@ -12,35 +13,17 @@ namespace WebApiKonie.Controllers
     [ApiController]
     public class RejestracjaController : ControllerBase
     {
-        private ZakladyDB database;
+        private readonly IRejestracja service;
 
-        public RejestracjaController(ZakladyDB zaklady)
+        public RejestracjaController(IRejestracja rejestracja)
         {
-            this.database = zaklady;
-        }
-
-        [HttpGet]
-        public IEnumerable<Autoryzacja> GetUsers()
-        {
-            List<Autoryzacja> temp=new List<Autoryzacja>();
-            temp = database.Autoryzacja.ToList();
-            return temp;
+            this.service = rejestracja;
         }
 
         [HttpPost]
-        public bool Rejestracja([FromBody] Autoryzacja autoryzacja)
+        public ActionResult<bool> post(RejestracjaDTO rejestracja)
         {
-            try
-            {
-                autoryzacja.Rola = "Klient";
-                database.Autoryzacja.Add(autoryzacja);
-                database.SaveChanges();
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
+            return Ok(service.Rejestruj(rejestracja));
         }
     }
 }
