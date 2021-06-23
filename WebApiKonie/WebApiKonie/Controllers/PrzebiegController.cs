@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiKonie.DTO;
+using WebApiKonie.Models;
 using WebApiKonie.Services;
 
 namespace WebApiKonie.Controllers
@@ -24,6 +25,12 @@ namespace WebApiKonie.Controllers
         public ActionResult<PrzebiegDTO> get(int id)
         {
             return Ok(service.pobierzPrzebieg(id));
+        }
+
+        [HttpPut]
+        public ActionResult<bool> put([FromBody] WyscigDTO wyscig)
+        {
+            return Ok(service.uruchomWyscig(wyscig));
         }
     }
 }
