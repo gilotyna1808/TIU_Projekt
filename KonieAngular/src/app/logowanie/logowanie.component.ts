@@ -28,7 +28,8 @@ export class LogowanieComponent implements OnInit {
 onSubmit(){
   this.autoryzacjaService.login(this.login).subscribe(res=>{
     if(res){
-      this.router.navigateByUrl('');
+      //this.router.navigateByUrl('');
+      this.autoryzacjaService.pobierzZalogowanegoUzytkownika();
     }else{
       this.blad="Bledny login lub haslo";
     }

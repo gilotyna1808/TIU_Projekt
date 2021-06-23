@@ -46,6 +46,9 @@ export class WyscigiFormComponent implements OnInit {
 
 
   onSubmit(){
+    let w:WyscigDTO;
+    w=this.form.value;
+    console.log(w);
     if(this.id==0)this.wyscigService.dodajWyscig(this.form.value).subscribe(res => console.log(res));
     if(this.id>0)this.wyscigService.edytujWyscig(this.form.value).subscribe(res=> console.log(res));
     this.router.navigateByUrl('wyscigi');

@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -27,6 +28,8 @@ namespace WebApiKonie.Services
             }else if(database.Autoryzacja.Where(res => res.Login == login.Login && res.Password == login.Password && res.Rola == "user").Count() == 1)
             {
                 uzytkownikZalogowany.Rola = "user";
+                int idAut = database.Autoryzacja.Where(res => res.Login == login.Login && res.Password == login.Password).Single().ID_Autoryzacja;
+                uzytkownikZalogowany.ID = database.Klienci.Where(s => s.Autoryzacja.ID_Autoryzacja == idAut).Single().ID_Klienta;
             }
             else
             {

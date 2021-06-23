@@ -20,8 +20,8 @@ export class WyscigiComponent implements OnInit {
   ngOnInit(): void {
     this.wyscigService.pobierzWyscigi().subscribe(res=>this.wyscigi=res);
     this.konieService.pobierzKonie().subscribe(res=>this.konie=res);
-    this.wyscigService.pobierzWyscigi().subscribe(res=>console.log((this.wyscigi),res));
-    console.log(this.wyscigi);
+    //this.wyscigService.pobierzWyscigi().subscribe(res=>console.log((this.wyscigi),res));
+    //onsole.log(this.wyscigi);
   }
 
 }

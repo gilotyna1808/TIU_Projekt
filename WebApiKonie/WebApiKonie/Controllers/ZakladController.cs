@@ -36,6 +36,7 @@ namespace WebApiKonie.Controllers
         [HttpPost]
         public ActionResult<bool> post([FromBody] ZakladDTO zaklad)
         {
+            System.Diagnostics.Debug.WriteLine(zaklad);
             return Ok(service.dodajZaklad(zaklad));
         }
 

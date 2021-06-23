@@ -8,7 +8,7 @@ export class WyscigDTO{
   iD_Wyscigu:	number;
   dateTime:	string;
   zakonczony:	boolean;
-  wygrany:	number;
+  wygrany?:	number;
   kon1:	number;
   kon2:	number;
   kon3:	number;
@@ -40,6 +40,9 @@ export class WyscigComponent implements OnInit {
     //this.konieService.pobierzKonia(1).subscribe();
     //console.log(this.kon);
     //console.log(this.kon.findIndex(x=>x.iD_Konia = 1));
+    if(this.wyscig.wygrany==null&& i==null){
+      return "";
+    }
     return this.kon[this.kon.findIndex(x=>x.iD_Konia == i)].nazwa;
   }
 

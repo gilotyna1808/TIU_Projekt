@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <td>ID Wyścigu:</td>
+        <td>Wybrany Koń</td>
+        <td>Wygrany?</td>
+        <td>Wybrany:</td>
+        <td>Kwota Zakładu</td>
+        <td>Kurs Zakładu</td>
+    </tr>
+    <tr *ngFor="let z of zaklady">
+        <app-zaklad [zaklad]="z" [kon]="konie"></app-zaklad>
+    </tr>
+</table>

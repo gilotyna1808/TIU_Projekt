@@ -10,6 +10,8 @@ import { MenuComponent } from './menu/menu.component';
 import { WyscigComponent } from './wyscig/wyscig.component';
 import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
 import { WyscigiComponent } from './wyscigi/wyscigi.component';
+import { ZakladyFormComponent } from './zaklady-form/zaklady-form.component';
+import { ZakladyComponent } from './zaklady/zaklady.component';
 
 const routes: Routes = [
   {path:'',component:MenuComponent},
@@ -22,6 +24,11 @@ const routes: Routes = [
     {path:'', component:WyscigiComponent},
     {path:'dodaj',component:WyscigiFormComponent},
     {path:'dodaj/:id',component:WyscigiFormComponent}
+  ]},
+  {path:'zaklady',children:[
+    {path: '', component:ZakladyComponent},
+    {path: 'dodaj', component:ZakladyFormComponent},
+    {path: 'dodaj/:id',component:ZakladyFormComponent}
   ]}
   
 ];

@@ -23,7 +23,33 @@ namespace WebApiKonie.Services
             z.Klient = database.Klienci.Where(s => s.ID_Klienta == zaklad.KlientID).Single();
             z.Kon = database.Konie.Where(s => s.ID_Konia == zaklad.KonWybranyID).Single();
             z.Wyscig = database.Wyscigi.Where(s => s.ID_Wyscigu == zaklad.WyscigID).Single();
-            z.Kurs = zaklad.Kurs;
+            double kurs = 0;
+            if (database.SkladWyscigow.Include(x=>x.Kon1).Where(s => s.ID_Wyscigu == zaklad.WyscigID)
+                .Where(s => s.Kon1.ID_Konia == zaklad.KonWybranyID).Count() == 1)
+            {
+                kurs = database.SkladWyscigow.Where(s => s.ID_Wyscigu == zaklad.WyscigID).Single().KursKon1;
+            }
+            if (database.SkladWyscigow.Include(x => x.Kon2).Where(s => s.ID_Wyscigu == zaklad.WyscigID)
+                .Where(s => s.Kon2.ID_Konia == zaklad.KonWybranyID).Count() == 1)
+            {
+                kurs = database.SkladWyscigow.Where(s => s.ID_Wyscigu == zaklad.WyscigID).Single().KursKon2;
+            }
+            if (database.SkladWyscigow.Include(x => x.Kon3).Where(s => s.ID_Wyscigu == zaklad.WyscigID)
+                .Where(s => s.Kon3.ID_Konia == zaklad.KonWybranyID).Count() == 1)
+            {
+                kurs = database.SkladWyscigow.Where(s => s.ID_Wyscigu == zaklad.WyscigID).Single().KursKon3;
+            }
+            if (database.SkladWyscigow.Include(x => x.Kon4).Where(s => s.ID_Wyscigu == zaklad.WyscigID)
+                .Where(s => s.Kon4.ID_Konia == zaklad.KonWybranyID).Count() == 1)
+            {
+                kurs = database.SkladWyscigow.Where(s => s.ID_Wyscigu == zaklad.WyscigID).Single().KursKon4;
+            }
+            if (database.SkladWyscigow.Include(x => x.Kon5).Where(s => s.ID_Wyscigu == zaklad.WyscigID)
+                .Where(s => s.Kon5.ID_Konia == zaklad.KonWybranyID).Count() == 1)
+            {
+                kurs = database.SkladWyscigow.Where(s => s.ID_Wyscigu == zaklad.WyscigID).Single().KursKon5;
+            }
+            z.Kurs = kurs;
             z.Wyplacony = false;
             z.KwotaZakladu = zaklad.KwotaZakladu;
             database.Klienci.Where(s => s.ID_Klienta == zaklad.KlientID).Single().StanKonta -= zaklad.KwotaZakladu;

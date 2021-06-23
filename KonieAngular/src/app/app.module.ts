@@ -13,6 +13,9 @@ import { KonEdycjaComponent } from './kon-edycja/kon-edycja.component';
 import { WyscigComponent } from './wyscig/wyscig.component';
 import { WyscigiComponent } from './wyscigi/wyscigi.component';
 import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
+import { ZakladComponent } from './zaklad/zaklad.component';
+import { ZakladyComponent } from './zaklady/zaklady.component';
+import { ZakladyFormComponent } from './zaklady-form/zaklady-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
     KonEdycjaComponent,
     WyscigComponent,
     WyscigiComponent,
-    WyscigiFormComponent
+    WyscigiFormComponent,
+    ZakladComponent,
+    ZakladyComponent,
+    ZakladyFormComponent
   ],
   imports: [
     BrowserModule,

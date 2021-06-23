@@ -10,7 +10,7 @@ namespace WebApiKonie.Models
         public int ID_Wyscigu { get; set; }
         public DateTime DateTime { get; set; }
         public bool Zakonczony { get; set; }
-        public int Wygrany { get; set; }
+        public int? Wygrany { get; set; }
         public int Kon1 { get; set; }
         public int Kon2 { get; set; }
         public int Kon3 { get; set; }

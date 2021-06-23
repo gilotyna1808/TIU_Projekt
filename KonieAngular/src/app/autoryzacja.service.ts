@@ -13,6 +13,7 @@ export interface Login{
 export interface LoginRes{
   token:string;
   rola:string;
+  id:number
 }
 
 @Injectable({
@@ -24,6 +25,7 @@ export class AutoryzacjaService {
 
 pobierzZalogowanegoUzytkownika():LoginRes{
   let loginres=JSON.parse(sessionStorage.getItem('uzytkownik')) as LoginRes;
+  console.log(loginres);
   return loginres;
 }
 

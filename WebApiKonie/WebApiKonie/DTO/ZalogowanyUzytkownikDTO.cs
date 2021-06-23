@@ -9,5 +9,6 @@ namespace WebApiKonie.Models
     {
         public string Token { get; set; }
         public string Rola { get; set; }
+        public int ID { get; set; }
     }
 }
