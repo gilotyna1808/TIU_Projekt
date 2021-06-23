@@ -68,6 +68,11 @@ namespace WebApiKonie
                 });
             });
 
+            services.AddCors(options => options.AddPolicy("AllAllowed", builder =>
+            {
+                builder.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader().Build();
+            }));
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -99,7 +104,7 @@ namespace WebApiKonie
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors("AllAllowed");
             app.UseAuthentication();
             app.UseAuthorization();
 
