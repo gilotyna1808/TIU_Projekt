@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\KonieAngular",
+    "\\KonieAngular\\src",
+    "\\KonieAngular\\src\\app\\wyscigi"
   ],
-  "SelectedNode": "\\WebApiKonie.sln",
+  "SelectedNode": "\\KonieAngular\\src\\app",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <td>Data</td>
+        <td>Zwycięski Koń</td>
+        <td>Kon NR:1</td>
+        <td>Kurs na konia NR1</td>
+        <td>Kon NR:2</td>
+        <td>Kurs na konia NR2</td>
+        <td>Kon NR:3</td>
+        <td>Kurs na konia NR3</td>
+        <td>Kon NR:4</td>
+        <td>Kurs na konia NR4</td>
+        <td>Kon NR:5</td>
+        <td>Kurs na konia NR5</td>
+        <td>Czy Zakonczony</td>
+    </tr>
+    <tr *ngFor="let w of wyscigi">
+        <app-wyscig [wyscig]="w" [kon]="konie"></app-wyscig>
+    </tr>
+</table>

@@ -21,7 +21,7 @@ namespace WebApiKonie.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<WyscigDTO>> get()
+        public ActionResult<IEnumerable<WyscigDTO>> get()
         {
             var wynik = _wyscigService.pobierzWyscigi();
             return Ok(wynik);

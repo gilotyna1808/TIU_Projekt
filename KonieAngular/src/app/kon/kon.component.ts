@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { KonieService } from '../konie.service';
 
 export interface Kon{
-  id:number;
+  iD_Konia:number;
   nazwa: string;
   wiek:number;
   kondycja:number;
