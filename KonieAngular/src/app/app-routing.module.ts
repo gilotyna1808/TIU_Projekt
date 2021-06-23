@@ -7,6 +7,7 @@ import { KonComponent } from './kon/kon.component';
 import { KonieComponent } from './konie/konie.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
 import { MenuComponent } from './menu/menu.component';
+import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 import { WyscigComponent } from './wyscig/wyscig.component';
 import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
 import { WyscigiComponent } from './wyscigi/wyscigi.component';
@@ -29,7 +30,8 @@ const routes: Routes = [
     {path: '', component:ZakladyComponent},
     {path: 'dodaj', component:ZakladyFormComponent},
     {path: 'dodaj/:id',component:ZakladyFormComponent}
-  ]}
+  ]},
+  {path:'rejestracja',component:RejestracjaComponent}
   
 ];
 

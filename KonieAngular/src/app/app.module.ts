@@ -16,6 +16,7 @@ import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
 import { ZakladComponent } from './zaklad/zaklad.component';
 import { ZakladyComponent } from './zaklady/zaklady.component';
 import { ZakladyFormComponent } from './zaklady-form/zaklady-form.component';
+import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ZakladyFormComponent } from './zaklady-form/zaklady-form.component';
     WyscigiFormComponent,
     ZakladComponent,
     ZakladyComponent,
-    ZakladyFormComponent
+    ZakladyFormComponent,
+    RejestracjaComponent
   ],
   imports: [
     BrowserModule,

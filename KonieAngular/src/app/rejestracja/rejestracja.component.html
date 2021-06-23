@@ -1,0 +1,40 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="imie">imie: </label>
+        <input id="imie" name="imie" formControlName="imie">
+    </div>
+    <div>
+        <label for="nazwisko">nazwisko: </label>
+        <input id="nazwisko" name="nazwisko" formControlName="nazwisko">
+    </div>
+    <div>
+        <label for="wiek">wiek: </label>
+        <input id="wiek" name="wiek" formControlName="wiek" type="wiek">
+    </div>
+    <div>
+        <label for="email">email: </label>
+        <input id="email" name="email" formControlName="email">
+    </div>
+    <div>
+        <label for="stanKonta">stanKonta: </label>
+        <input id="stanKonta" name="stanKonta" formControlName="stanKonta" type="number">
+    </div>
+    <div>
+        <label for="login">login: </label>
+        <input id="login" name="login" formControlName="login">
+    </div>
+    <div>
+        <label for="password">password: </label>
+        <input id="password" name="password" formControlName="password" type="password">
+    </div>
+    <div>
+        <label for="rola">rola: </label>
+        <input id="rola" name="rola" formControlName="rola" value="user" readonly>
+    </div>
+
+    <div>
+        <button type="reset">Reset</button>
+        <button [disabled]="form.invalid">Zarejestruj</button>
+    </div>
+    </form>
