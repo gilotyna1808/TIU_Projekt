@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+    <div>
+        <label>Login: </label>
+        <input [(ngModel)]="login.login" required name="login">
+    </div>
+    <div>
+        <label>Hasło: </label>
+        <input [(ngModel)]="login.password" name="haslo" required type="password">
+    </div>
+    
+        <div>
+            <input [disabled]="form.invalid" type="submit" value="Zaloguj">
+        </div>
+    </form>
+    
+    <div>
+        {{blad}}
+    </div>
+    
+    
