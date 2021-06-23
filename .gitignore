@@ -1,1 +1,46 @@
-KonieAngular\node_module\
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/KonieAngular/dist
+/KonieAngular/tmp
+/KonieAngular/out-tsc
+# Only exists if Bazel was run
+/KonieAngular/bazel-out
+
+# dependencies
+/KonieAngular/node_modules
+
+# profiling files
+/KonieAngular/chrome-profiler-events*.json
+/KonieAngular/speed-measure-plugin*.json
+
+# IDEs and editors
+/KonieAngular/.idea
+/KonieAngular/.project
+/KonieAngular/.classpath
+/KonieAngular/.c9/
+/KonieAngular/*.launch
+/KonieAngular/.settings/
+/KonieAngular/*.sublime-workspace
+
+# IDE - VSCode
+/KonieAngular/.vscode/*
+/KonieAngular!.vscode/settings.json
+/KonieAngular/!.vscode/tasks.json
+/KonieAngular/!.vscode/launch.json
+/KonieAngular/!.vscode/extensions.json
+/KonieAngular/.history/*
+
+# misc
+/KonieAngular/.sass-cache
+/KonieAngular/connect.lock
+/KonieAngular/coverage
+/KonieAngular/libpeerconnection.log
+/KonieAngular/npm-debug.log
+/KonieAngular/yarn-error.log
+/KonieAngular/testem.log
+/KonieAngular/typings
+
+# System Files
+/KonieAngular/.DS_Store
+/KonieAngular/Thumbs.db
