@@ -1,0 +1,30 @@
+
+ID Konia: {{iD_Konia}}
+
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="nazwa">Nazwa: </label>
+        <input id="nazwa" name="nazwa" formControlName="nazwa">
+    </div>
+    <div>
+        <label for="wiek">wiek: </label>
+        <input id="wiek" name="wiek" formControlName="wiek">
+    </div>
+    <div>
+        <label for="kraj">kraj: </label>
+        <input id="kraj" name="kraj" formControlName="kraj">
+    </div>
+    <div>
+        <label for="kondycja">kondycja: </label>
+        <input id="kondycja" name="kondycja" formControlName="kondycja" type="number">
+    </div>
+    <div>
+        <label for="predkosc">predkosc: </label>
+        <input id="predkosc" name="predkosc" formControlName="predkosc">
+    </div>
+    <div>
+        <button type="reset">Reset</button>
+        <button [disabled]="form.invalid">Zapisz</button>
+    </div>
+    </form>

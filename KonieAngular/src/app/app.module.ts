@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { KonComponent } from './kon/kon.component';
 import { KonieComponent } from './konie/konie.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
+import { MenuComponent } from './menu/menu.component';
+import { KonEdycjaComponent } from './kon-edycja/kon-edycja.component';
 import { WyscigComponent } from './wyscig/wyscig.component';
 import { WyscigiComponent } from './wyscigi/wyscigi.component';
 import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
@@ -18,6 +20,8 @@ import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
     KonComponent,
     LogowanieComponent,
     KonieComponent,
+    MenuComponent,
+    KonEdycjaComponent,
     WyscigComponent,
     WyscigiComponent,
     WyscigiFormComponent
@@ -25,8 +29,8 @@ import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

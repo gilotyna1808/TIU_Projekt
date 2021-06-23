@@ -1,7 +1,8 @@
 <div style="border: solid 2px; margin: 5px;">
     <p>Imie konia: {{kon.nazwa}}</p>
     <p>Wiek konia: {{kon.wiek}}</p>
+    <p>Kraj pochodzenia konia: {{kon.kraj}}</p>
     <p>Kondycja konia: {{kon.kondycja}}</p>
     <p>Predkosc konia: {{kon.predkosc}}</p>
-    <button></button>
+    <button (click)="przejdzDoEdycji(kon)">Przejdz do edycji</button>
 </div>

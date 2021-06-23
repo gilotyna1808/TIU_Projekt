@@ -1,20 +1,29 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { combineAll } from 'rxjs/operators';
 import { AppComponent } from './app.component';
+import { KonEdycjaComponent } from './kon-edycja/kon-edycja.component';
 import { KonComponent } from './kon/kon.component';
 import { KonieComponent } from './konie/konie.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
+import { MenuComponent } from './menu/menu.component';
+import { WyscigComponent } from './wyscig/wyscig.component';
 import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
 import { WyscigiComponent } from './wyscigi/wyscigi.component';
 
 const routes: Routes = [
-  {path:'',component:KonieComponent},
+  {path:'',component:MenuComponent},
   {path:'logowanie',component:LogowanieComponent},
-  {path:'wyscigi', children:[
-    {path: '', component:WyscigiComponent},
-    {path: 'dodaj', component:WyscigiFormComponent},
-    {path: 'dodaj/:id', component:WyscigiFormComponent}
+  {path:'konie',children:[
+    {path:'',component:KonieComponent},
+    {path:':iD_Konia/konieEdycja',component:KonEdycjaComponent}
+  ]},
+  {path:'wyscigi',children:[
+    {path:'', component:WyscigiComponent},
+    {path:'dodaj',component:WyscigiFormComponent},
+    {path:'dodaj/:id',component:WyscigiFormComponent}
   ]}
+  
 ];
 
 @NgModule({

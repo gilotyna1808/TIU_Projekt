@@ -7,6 +7,7 @@ export interface Kon{
   iD_Konia:number;
   nazwa: string;
   wiek:number;
+  kraj:string;
   kondycja:number;
   predkosc:number;
 }
@@ -19,14 +20,16 @@ export interface Kon{
 })
 export class KonComponent implements OnInit {
   @Input() kon:Kon;
+iD_Konia:number;
 
   constructor( private konieService:KonieService, private router: Router) { }
 
   ngOnInit(): void {
+   
   }
 
-przejdzDoEdycji(k:Kon){
-this.konieService.edytujKonia(k)
+przejdzDoEdycji(kon:Kon){
+this.router.navigateByUrl("konie/"+kon.iD_Konia+'/konieEdycja');
 }
 
 }
