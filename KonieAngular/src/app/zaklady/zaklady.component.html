@@ -1,13 +1,14 @@
-<table>
-    <tr>
-        <td>ID Wyścigu:</td>
-        <td>Wybrany Koń</td>
-        <td>Wygrany?</td>
-        <td>Wybrany:</td>
-        <td>Kwota Zakładu</td>
-        <td>Kurs Zakładu</td>
-    </tr>
-    <tr *ngFor="let z of zaklady">
-        <app-zaklad [zaklad]="z" [kon]="konie"></app-zaklad>
-    </tr>
-</table>
+<div class="container" style="width: 100%;margin: 0px;padding: auto;">
+    <div class="row" style="width: 100%;margin: 0px;padding: auto;">
+        <div class="col-1 col-md-1 col-lx-1"></div>
+        <div class="col-2 col-md-2">ID Wyścigu:</div>
+        <div class="col-2 col-md-2">Wybrany Koń</div>
+        <div class="col-1 col-md-1">Wygrany?</div>
+        <div class="col-1 col-md-1">Wybrany:</div>
+        <div class="col-2 col-md-2">Kwota Zakładu</div>
+        <div class="col-2 col-md-2">Kurs Zakładu</div>
+      </div>
+</div>
+<div *ngFor="let z of zaklady" style="width: 100%;">
+    <app-zaklad [zaklad]="z" [kon]="konie"></app-zaklad>
+</div>

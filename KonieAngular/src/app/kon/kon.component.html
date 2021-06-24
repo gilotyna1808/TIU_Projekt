@@ -1,8 +1,14 @@
-<div style="border: solid 2px; margin: 5px;">
-    <p>Imie konia: {{kon.nazwa}}</p>
-    <p>Wiek konia: {{kon.wiek}}</p>
-    <p>Kraj pochodzenia konia: {{kon.kraj}}</p>
-    <p>Kondycja konia: {{kon.kondycja}}</p>
-    <p>Predkosc konia: {{kon.predkosc}}</p>
-    <button (click)="przejdzDoEdycji(kon)">Przejdz do edycji</button>
+<div class="row align-items-center kon">
+    <div class="col-md-3">
+    <p><b>Imie konia: </b> {{kon.nazwa}}</p>
+    <p><b>Wiek konia: </b> {{kon.wiek}}</p>
+    <p><b>Kraj pochodzenia konia:</b> {{kon.kraj}}</p>
+    <p><b>Kondycja konia:</b> {{kon.kondycja}}</p>
+    <p><b>Predkosc konia:</b> {{kon.predkosc}}</p>
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-2">
+    <button (click)="przejdzDoEdycji(kon)" class="btn-primary">Przejdz do edycji</button>
+
+</div>
 </div>

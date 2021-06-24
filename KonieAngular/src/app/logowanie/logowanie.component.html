@@ -1,20 +1,30 @@
-<form (ngSubmit)="onSubmit()" #form="ngForm">
-    <div>
-        <label>Login: </label>
-        <input [(ngModel)]="login.login" required name="login">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://images.clipartpanda.com/quarter-horse-head-clip-art-yTo7gB8TE.jpeg" id="icon" alt="User Icon" />
     </div>
-    <div>
-        <label>Hasło: </label>
-        <input [(ngModel)]="login.password" name="haslo" required type="password">
-    </div>
-    
-        <div>
-            <input [disabled]="form.invalid" type="submit" value="Zaloguj">
-        </div>
+
+    <!-- Login Form -->
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="login.login">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="login.password">
+      <input type="submit" class="fadeIn fourth" [disabled]="form.invalid" type="submit" value="Zaloguj">
     </form>
-    
-    <div>
-        {{blad}}
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/rejestracja">Zarejestruj się</a>
     </div>
+
+  </div>
+</div>
     
     

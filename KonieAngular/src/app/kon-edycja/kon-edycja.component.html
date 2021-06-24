@@ -1,30 +1,36 @@
-
+<div class="container edycja">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Edycja</h2>
 ID Konia: {{iD_Konia}}
 
 <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-    <div>
-        <label for="nazwa">Nazwa: </label>
-        <input id="nazwa" name="nazwa" formControlName="nazwa">
+    <div class="form-group">
+        <label for="nazwa" class="labelstyl">Nazwa: </label>
+        <input id="nazwa" name="nazwa" formControlName="nazwa" class="form-control">
     </div>
-    <div>
-        <label for="wiek">wiek: </label>
-        <input id="wiek" name="wiek" formControlName="wiek">
+    <div class="form-group">
+        <label for="wiek" class="labelstyl">Wiek: </label>
+        <input id="wiek" name="wiek" formControlName="wiek" class="form-control">
     </div>
-    <div>
-        <label for="kraj">kraj: </label>
-        <input id="kraj" name="kraj" formControlName="kraj">
+    <div class="form-group">
+        <label for="kraj" class="labelstyl">Kraj: </label>
+        <input id="kraj" name="kraj" formControlName="kraj" class="form-control">
     </div>
-    <div>
-        <label for="kondycja">kondycja: </label>
-        <input id="kondycja" name="kondycja" formControlName="kondycja" type="number">
+    <div class="form-group">
+        <label for="kondycja" class="labelstyl">Kondycja: </label>
+        <input id="kondycja" name="kondycja" formControlName="kondycja" type="number" class="form-control">
     </div>
-    <div>
-        <label for="predkosc">predkosc: </label>
-        <input id="predkosc" name="predkosc" formControlName="predkosc">
+    <div class="form-group">
+        <label for="predkosc" class="labelstyl">Predkosc: </label>
+        <input id="predkosc" name="predkosc" formControlName="predkosc" class="form-control">
     </div>
-    <div>
-        <button type="reset">Reset</button>
-        <button [disabled]="form.invalid">Zapisz</button>
+    <div class="form-group">
+        <button type="reset" class="btn btn-danger" style="margin:2%">Reset</button>
+        <button [disabled]="form.invalid" class="btn btn-info">Zapisz</button>
     </div>
     </form>
+</div>
+</div>
+</div>

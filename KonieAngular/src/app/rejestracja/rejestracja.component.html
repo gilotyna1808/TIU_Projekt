@@ -1,40 +1,47 @@
+<div class="container edycja">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Rejestracja</h2>
 <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-    <div>
-        <label for="imie">imie: </label>
-        <input id="imie" name="imie" formControlName="imie">
+    <div class="form-group">
+        <label for="imie" class="labelstyl">Imię: </label>
+        <input id="imie" name="imie" formControlName="imie" class="form-control">
     </div>
-    <div>
-        <label for="nazwisko">nazwisko: </label>
-        <input id="nazwisko" name="nazwisko" formControlName="nazwisko">
+    <div class="form-group">
+        <label for="nazwisko" class="labelstyl">Nazwisko: </label>
+        <input id="nazwisko" name="nazwisko" formControlName="nazwisko" class="form-control">
     </div>
-    <div>
-        <label for="wiek">wiek: </label>
-        <input id="wiek" name="wiek" formControlName="wiek" type="wiek">
+    <div class="form-group">
+        <label for="wiek" class="labelstyl">Wiek: </label>
+        <input id="wiek" name="wiek" formControlName="wiek" type="wiek" class="form-control">
     </div>
-    <div>
-        <label for="email">email: </label>
-        <input id="email" name="email" formControlName="email">
+    <div class="form-group">
+        <label for="email" class="labelstyl">Email: </label>
+        <input id="email" name="email" formControlName="email" class="form-control">
     </div>
-    <div>
-        <label for="stanKonta">stanKonta: </label>
-        <input id="stanKonta" name="stanKonta" formControlName="stanKonta" type="number">
+    <div class="form-group">
+        <label for="stanKonta" class="labelstyl">Stan konta: </label>
+        <input id="stanKonta" name="stanKonta" formControlName="stanKonta" type="number" class="form-control">
     </div>
-    <div>
-        <label for="login">login: </label>
-        <input id="login" name="login" formControlName="login">
+    <div class="form-group">
+        <label for="login" class="labelstyl">Login: </label>
+        <input id="login" name="login" formControlName="login" class="form-control">
     </div>
-    <div>
-        <label for="password">password: </label>
-        <input id="password" name="password" formControlName="password" type="password">
+    <div class="form-group">
+        <label for="password" class="labelstyl">Hasło: </label>
+        <input id="password" name="password" formControlName="password" type="password" class="form-control">
     </div>
-    <div>
-        <label for="rola">rola: </label>
-        <input id="rola" name="rola" formControlName="rola" value="user" readonly>
+    <div class="form-group">
+        <label for="rola" class="labelstyl">Rola: </label>
+        <input id="rola" name="rola" formControlName="rola" value="user" readonly class="form-control">
     </div>
 
-    <div>
-        <button type="reset">Reset</button>
-        <button [disabled]="form.invalid">Zarejestruj</button>
+    <div class="form-group">
+        <button type="reset" class="btn btn-danger" style="margin:2%">Reset</button>
+        <button [disabled]="form.invalid" class="btn btn-info">Zarejestruj</button>
     </div>
     </form>
+</div>
+</div>
+</div>

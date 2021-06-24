@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { combineAll } from 'rxjs/operators';
 import { AppComponent } from './app.component';
+import { AutoryzacjaGuard } from './autoryzacja.guard';
 import { KonEdycjaComponent } from './kon-edycja/kon-edycja.component';
 import { KonComponent } from './kon/kon.component';
 import { KonieComponent } from './konie/konie.component';
@@ -15,21 +16,21 @@ import { ZakladyFormComponent } from './zaklady-form/zaklady-form.component';
 import { ZakladyComponent } from './zaklady/zaklady.component';
 
 const routes: Routes = [
-  {path:'',component:MenuComponent},
+  {path:'',component:MenuComponent,canActivate:[AutoryzacjaGuard]},
   {path:'logowanie',component:LogowanieComponent},
   {path:'konie',children:[
-    {path:'',component:KonieComponent},
-    {path:':iD_Konia/konieEdycja',component:KonEdycjaComponent}
+    {path:'',component:KonieComponent,canActivate:[AutoryzacjaGuard]},
+    {path:':iD_Konia/konieEdycja',component:KonEdycjaComponent,canActivate:[AutoryzacjaGuard]}
   ]},
   {path:'wyscigi',children:[
-    {path:'', component:WyscigiComponent},
-    {path:'dodaj',component:WyscigiFormComponent},
-    {path:'dodaj/:id',component:WyscigiFormComponent}
+    {path:'', component:WyscigiComponent,canActivate:[AutoryzacjaGuard]},
+    {path:'dodaj',component:WyscigiFormComponent,canActivate:[AutoryzacjaGuard]},
+    {path:'dodaj/:id',component:WyscigiFormComponent,canActivate:[AutoryzacjaGuard]}
   ]},
   {path:'zaklady',children:[
-    {path: '', component:ZakladyComponent},
-    {path: 'dodaj', component:ZakladyFormComponent},
-    {path: 'dodaj/:id',component:ZakladyFormComponent}
+    {path: '', component:ZakladyComponent,canActivate:[AutoryzacjaGuard]},
+    {path: 'dodaj', component:ZakladyFormComponent,canActivate:[AutoryzacjaGuard]},
+    {path: 'dodaj/:id',component:ZakladyFormComponent,canActivate:[AutoryzacjaGuard]}
   ]},
   {path:'rejestracja',component:RejestracjaComponent}
   

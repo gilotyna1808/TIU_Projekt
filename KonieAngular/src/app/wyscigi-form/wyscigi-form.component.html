@@ -1,56 +1,58 @@
-<div>
-    <Form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
-        <p *ngIf="id==0">Dodawanie nowego wyscigu</p>
+<div class="container edycja">
+    <div class="row">
+        <div class="col-md-6">
+    <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h2 *ngIf="id==0">Dodawanie nowego wyscigu</h2>
         <p *ngIf="id!=0">Modyfikacja wyscigu o id: {{id}}</p>
-        <table>
-            <tr>
-                <td><label for="nazwa">Data:</label></td>
-                <td><input formControlName="data"><br></td>
-            </tr>
-            <tr>
-                <td><label for="opis">Kon Nr1:</label></td>
-                <td><input formControlName="Kon1"><br></td>
-            </tr>
-            <tr>
-                <td><label for="cena">Kurs dla Konia NR1:</label></td>
-                <td><input formControlName="KonKurs1"><br></td>
-            </tr>
-            <tr>
-                <td><label for="opis">Kon Nr2:</label></td>
-                <td><input formControlName="Kon2"><br></td>
-            </tr>
-            <tr>
-                <td><label for="cena">Kurs dla Konia NR2:</label></td>
-                <td><input formControlName="KonKurs2"><br></td>
-            </tr>
-            <tr>
-                <td><label for="opis">Kon Nr3:</label></td>
-                <td><input formControlName="Kon3"><br></td>
-            </tr>
-            <tr>
-                <td><label for="cena">Kurs dla Konia NR3:</label></td>
-                <td><input formControlName="KonKurs3"><br></td>
-            </tr>
-            <tr>
-                <td><label for="opis">Kon Nr4:</label></td>
-                <td><input formControlName="Kon4"><br></td>
-            </tr>
-            <tr>
-                <td><label for="cena">Kurs dla Konia NR14</label></td>
-                <td><input formControlName="KonKurs4"><br></td>
-            </tr>
-            <tr>
-                <td><label for="opis">Kon Nr5:</label></td>
-                <td><input formControlName="Kon5"><br></td>
-            </tr>
-            <tr>
-                <td><label for="cena">Kurs dla Konia NR5:</label></td>
-                <td><input formControlName="KonKurs5"><br></td>
-            </tr>
-            <tr>
-                <td><button class="btn btn-primary" type="reset">Reset</button></td>
-                <td class="float-sm-right"><button class="btn btn-success" [disabled]="form.invalid" type="submit">Zatwierdź</button></td>
-            </tr>
-        </table>
-    </Form>    
+        <div class="form-group">
+                <label for="nazwa" class="labelstyl">Data:</label>
+                <input formControlName="data" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="opis" class="labelstyl">Kon Nr1:</label>
+                <input formControlName="Kon1" class="form-control">
+          </div>
+          <div class="form-group">
+               <label for="cena" class="labelstyl">Kurs dla Konia NR1:</label>
+                <input formControlName="KonKurs1" class="form-control">
+           </div>
+           <div class="form-group">
+                <label for="opis" class="labelstyl">Kon Nr2:</label>
+                <input formControlName="Kon2" class="form-control">
+          </div>
+          <div class="form-group">
+                <label for="cena" class="labelstyl">Kurs dla Konia NR2:</label>
+                <input formControlName="KonKurs2" class="form-control">
+          </div>
+          <div class="form-group">
+                <label for="opis" class="labelstyl">Kon Nr3:</label>
+                <input formControlName="Kon3" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cena" class="labelstyl">Kurs dla Konia NR3:</label>
+                <input formControlName="KonKurs3" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="opis" class="labelstyl">Kon Nr4:</label>
+                <input formControlName="Kon4" class="form-control">
+           </div>
+           <div class="form-group">
+                <label for="cena" class="labelstyl">Kurs dla Konia NR14</label>
+                <input formControlName="KonKurs4" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="opis" class="labelstyl">Kon Nr5:</label>
+                <input formControlName="Kon5" class="form-control">
+           </div>
+           <div class="form-group">
+                <label for="cena" class="labelstyl">Kurs dla Konia NR5:</label>
+                <input formControlName="KonKurs5" class="form-control">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-danger" style="margin:2%" type="reset">Reset</button>
+                <button class="btn btn-info" [disabled]="form.invalid" type="submit">Zatwierdź</button>
+         </div>
+    </form>    
+</div>
+</div>
 </div>
