@@ -17,6 +17,7 @@ import { ZakladComponent } from './zaklad/zaklad.component';
 import { ZakladyComponent } from './zaklady/zaklady.component';
 import { ZakladyFormComponent } from './zaklady-form/zaklady-form.component';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
+import { PortfelComponent } from './portfel/portfel.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RejestracjaComponent } from './rejestracja/rejestracja.component';
     ZakladComponent,
     ZakladyComponent,
     ZakladyFormComponent,
-    RejestracjaComponent
+    RejestracjaComponent,
+    PortfelComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+.fullH{
+    height: 100%;
+    min-height: 700px;
+}
+
+h1{
+    font-size: xxx-large;
+}
+
+.menu{
+    font-size: x-large;
+}
+li{
+    list-style: square;
+}
+
+a{
+    color: black;
+}

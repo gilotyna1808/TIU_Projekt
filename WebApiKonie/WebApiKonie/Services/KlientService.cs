@@ -44,8 +44,10 @@ namespace WebApiKonie.Services
             return true;
         }
 
-        public bool zmienStanKonta(int id, decimal kwota)
+        public bool zmienStanKonta(KlientDTO klient)
         {
+            int id = klient.ID_Klienta;
+            decimal kwota = Convert.ToDecimal(klient.StanKonta);
             database.Klienci.Where(s => s.ID_Klienta == id).First().StanKonta = kwota;
             database.SaveChanges();
             return true;

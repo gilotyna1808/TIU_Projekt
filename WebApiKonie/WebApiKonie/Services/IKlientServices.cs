@@ -11,7 +11,7 @@ namespace WebApiKonie.Services
         KlientDTO getById(int id);
         bool dodajKlienta(KlientDTO klient);
         bool modyfikujKlienta(KlientDTO klient);
-        bool zmienStanKonta(int id, decimal kwota);
+        bool zmienStanKonta(KlientDTO klient);
         IEnumerable<KlientDTO> getAll();
     }
 }

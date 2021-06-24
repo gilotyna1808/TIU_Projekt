@@ -36,7 +36,7 @@ namespace WebApiKonie.Controllers
         [HttpPut]
         public ActionResult<bool> update([FromBody]KlientDTO klient)
         {
-            return Ok(_klientService.modyfikujKlienta(klient));
+            return Ok(_klientService.zmienStanKonta(klient));
         }
 
         [HttpPost]

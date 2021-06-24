@@ -8,6 +8,7 @@ import { KonComponent } from './kon/kon.component';
 import { KonieComponent } from './konie/konie.component';
 import { LogowanieComponent } from './logowanie/logowanie.component';
 import { MenuComponent } from './menu/menu.component';
+import { PortfelComponent } from './portfel/portfel.component';
 import { RejestracjaComponent } from './rejestracja/rejestracja.component';
 import { WyscigComponent } from './wyscig/wyscig.component';
 import { WyscigiFormComponent } from './wyscigi-form/wyscigi-form.component';
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path:'logowanie',component:LogowanieComponent},
   {path:'konie',children:[
     {path:'',component:KonieComponent,canActivate:[AutoryzacjaGuard]},
-    {path:':iD_Konia/konieEdycja',component:KonEdycjaComponent,canActivate:[AutoryzacjaGuard]}
+    {path:':iD_Konia/konieEdycja',component:KonEdycjaComponent,canActivate:[AutoryzacjaGuard], data:{dozwolonaRola: "admin"}}
   ]},
   {path:'wyscigi',children:[
     {path:'', component:WyscigiComponent,canActivate:[AutoryzacjaGuard]},
@@ -32,7 +33,8 @@ const routes: Routes = [
     {path: 'dodaj', component:ZakladyFormComponent,canActivate:[AutoryzacjaGuard]},
     {path: 'dodaj/:id',component:ZakladyFormComponent,canActivate:[AutoryzacjaGuard]}
   ]},
-  {path:'rejestracja',component:RejestracjaComponent}
+  {path:'rejestracja',component:RejestracjaComponent},
+  {path: 'portfel',component:PortfelComponent,canActivate:[AutoryzacjaGuard]}
   
 ];
 

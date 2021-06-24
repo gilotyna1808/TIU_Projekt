@@ -1,19 +1,28 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark kolorTlo font">
+<nav class="container-fluid navbar navbar-expand-sm bg-dark navbar-dark kolorTlo font">
     <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
-      <img src="https://img.pngio.com/horse-logo-silhouette-horse-png-download-954981-free-horse-logo-png-954_981.png" alt="logo" style="width:40px;">
+    <a class="navbar-brand" routerLink="">
+      <img src="https://img.pngio.com/horse-logo-silhouette-horse-png-download-954981-free-horse-logo-png-954_981.png" alt="logo" style="width:50px;">
     </a>
     
     <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 1</a>
+    <ul class="navbar-nav navbar-right container-fluid">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="portfel"><img src="https://www.freeiconspng.com/uploads/06-wallet-icon--swanky-outlines-iconset--pixelkit-14.png" alt="logo" style="width:50px;"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="zaklady/dodaj" href="#">
+              <img src="https://www.seekpng.com/png/full/197-1973056_list-icon-png-list-icon-white-png.png" alt="logo" style="width:50px;">
+          </a>
+        </li>
+      <li class="nav-item " >
+        <a class="nav-link " routerLink="wyscigi" href="#">
+            <img src="https://www.nicepng.com/png/full/170-1707298_finish-flag-race-racing-win-winner-finish-checkered.png" alt="logo" style="width:50px;">
+        </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
-      </li>
-      <li class="nav-item" >
-        <a class="nav-link" href="#">Link 3</a>
+      <li class="nav-item " >
+        <a class="nav-link " (click)="Wyloguj()" href="#">
+            <img src="https://www.nicepng.com/png/full/271-2715115_exit-logout-comments-logout-icon-png-transparent.png" alt="logo" style="width:50px;">
+        </a>
       </li>
     </ul>
   </nav>

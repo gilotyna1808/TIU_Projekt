@@ -1,21 +1,21 @@
-<table>
-    <tr>
-        <th>Data</th>
-        <th>Zwycięski Koń</th>
-        <th>Kon NR:1</th>
-        <th>Kurs na konia NR1</th>
-        <th>Kon NR:2</th>
-        <th>Kurs na konia NR2</th>
-        <th>Kon NR:3</th>
-        <th>Kurs na konia NR3</th>
-        <th>Kon NR:4</th>
-        <th>Kurs na konia NR4</th>
-        <th>Kon NR:5</th>
-        <th>Kurs na konia NR5</th>
-        <th>Czy Zakonczony</th>
-    </tr>
-    
-    <tr *ngFor="let w of wyscigi">
+<div class="container-flex" style="width: 100%;margin: 0px;padding: auto;">
+    <div class="row" style="width: 100%;margin: 0px;padding: auto;">
+        <div class="col-1 col-md-1">Data:</div>
+        <div class="col-1 col-md-1">Zwycięski Koń</div>
+        <div class="col-1 col-md-1">Kon NR1:</div>
+        <div class="col-1 col-md-1">Kurs na konia NR1</div>
+        <div class="col-1 col-md-1">Kon NR2:</div>
+        <div class="col-1 col-md-1">Kurs na konia NR2</div>
+        <div class="col-1 col-md-1">Kon NR3:</div>
+        <div class="col-1 col-md-1">Kurs na konia NR3</div>
+        <div class="col-1 col-md-1">Kon NR4:</div>
+        <div class="col-1 col-md-1">Kurs na konia NR4</div>
+        <div class="col-1 col-md-1">Kon NR5:</div>
+        <div class="col-1 col-md-1">Kurs na konia NR5</div>
+        <div class="col-1 col-md-1">Czy Zakonczony</div>
+      </div>
+</div>
+         
+    <div *ngFor="let w of wyscigi" style="width: 100%;">
         <app-wyscig [wyscig]="w" [kon]="konie"></app-wyscig>
-    </tr>
-</table>
+    </div>
